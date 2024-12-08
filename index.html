@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -26,7 +27,7 @@
 						<li><a href="#one" class="active">About</a></li>
 						<li><a href="#two">Things I Can Do</a></li>
 						<li><a href="#three">My data projects</a></li>
-						<li><a href="#four">Contact</a></li>
+						<li><a href="#four">Certifications</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -109,26 +110,148 @@
 							</section>
 
 						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
+						<section id="four">
+							<div class="carousel">
+								<h3>Certifications</h3>
+
+
+								  <style>
+							#certifications {
+  text-align: center;
+  padding: 20px;
+}
+
+.cert-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Wider to show part of the next image */
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.cert-slides {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth slide effect */
+  width: calc(100% * 3); /* Adjust width for all slides */
+}
+
+.cert-slide {
+  flex: 0 0 70%; /* Adjust width to show partial next slide */
+  margin: 0 15px; /* Space between slides */
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.cert-slide img {
+  width: 100%; /* Fill the slide */
+  max-height: 200px; /* Adjust height to fit like a video */
+  object-fit: contain; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.cert-slide h3, 
+.cert-slide p {
+  margin: 10px 0;
+}
+
+.carousel-controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.carousel-controls .prev {
+  left: 10px;
+}
+
+.carousel-controls .next {
+  right: 10px;
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+								  </style>
+								</head>
+								<body>
+						
+								  <!-- Certifications Section -->
+								  <section id="certifications">
+									<h2></h2>
+									<div class="cert-carousel">
+									  <div class="cert-slides">
+										<!-- Slide 1 -->
+										<div class="cert-slide">
+										  <img src="images/Accenture.jpeg" alt="Certificate 1">
+										  <h3>Essential Data Analytics</h3>
+										  <p>Udemy - Instructor: Programming Up</p>
 										</div>
-									</form>
-								</div>
-							</section>
+										<!-- Slide 2 -->
+										<div class="cert-slide">
+										  <img src="images/BA.jpeg" alt="Certificate 2">
+										  <h3>Essential Business Analytics</h3>
+										  <p>Data Insights - Instructor: Programming Hub</p>
+										</div>
+										<!-- Slide 3 -->
+										<div class="cert-slide">
+										  <img src="images/PWC.jpeg" alt="Certificate 3">
+										  <h3>Power BI Job Simulation</h3>
+										  <p>Training from Forage</p>
+										</div>
+									  </div>
+									  <!-- Carousel Controls -->
+									  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+									  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+									</div>
+								  </section>
+								  
+								  <!-- JavaScript -->
+								  <script>
+									let currentIndex = 0;
+
+function showSlide(index) {
+  const slidesContainer = document.querySelector('.cert-slides');
+  const totalSlides = document.querySelectorAll('.cert-slide').length;
+
+  // Handle looping
+  if (index >= totalSlides) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = totalSlides - 1;
+  } else {
+    currentIndex = index;
+  }
+
+  // Adjust the transform property to show the correct slide
+  const offset = -currentIndex * (slidesContainer.clientWidth / totalSlides);
+  slidesContainer.style.transform = `translateX(${offset}px)`;
+}
+
+function moveSlide(step) {
+  showSlide(currentIndex + step);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentIndex);
+});
+
+								  </script>
+								
+								</body>
+								</html>
+								
+			
+	  
 
 						<!-- Five -->
 						<!--
