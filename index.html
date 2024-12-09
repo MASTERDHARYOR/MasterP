@@ -11,6 +11,121 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	<style>
+		/* Navbar Styling Enhancements */
+		#nav a {
+		  color: #fff;
+		  text-decoration: none;
+		  transition: color 0.3s ease, transform 0.2s ease;
+		}
+	
+		#nav a:hover {
+		  color: #00ffcc;
+		  transform: scale(1.1);
+		}
+	
+		/* Responsive Navbar */
+		@media (max-width: 768px) {
+		  #nav ul {
+			flex-direction: column;
+			text-align: center;
+		  }
+	
+		  #nav a {
+			margin-bottom: 10px;
+		  }
+		}
+	
+		/* Certifications Section */
+		#certifications {
+		  text-align: center;
+		  padding: 40px 20px;
+		}
+	
+		.accordion-item {
+		  margin: 15px auto;
+		  width: 90%;
+		  max-width: 500px;
+		  border: 1px solid #ddd;
+		  border-radius: 8px;
+		}
+	
+		.accordion-header:hover {
+		  background-color: #ff6600;
+		}
+	
+		.accordion-content img {
+		  max-width: 80%;
+		}
+	
+		/* Projects Section */
+		.project-container {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		  gap: 20px;
+		}
+	
+		.project-card {
+		  text-decoration: none;
+		  color: inherit;
+		  transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+	
+		.project-card:hover {
+		  transform: scale(1.05);
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		}
+	
+		.project-card img {
+		  width: 100%;
+		  max-width: 300px;
+		  border-radius: 8px;
+		}
+	
+		/* Back to Top Button */
+		#back-to-top {
+		  position: fixed;
+		  bottom: 20px;
+		  right: 20px;
+		  background-color: #007BFF;
+		  color: #fff;
+		  border: none;
+		  padding: 10px 15px;
+		  border-radius: 50%;
+		  cursor: pointer;
+		  display: none;
+		  z-index: 1000;
+		}
+	
+		#back-to-top:hover {
+		  background-color: #0056b3;
+		}
+	
+		/* Footer Icons */
+		.footer-icons {
+		  list-style: none;
+		  display: flex;
+		  justify-content: center;
+		  gap: 10px;
+		  padding: 0;
+		}
+	
+		.footer-icons li {
+		  display: inline-block;
+		}
+	
+		.footer-icons a {
+		  color: #fff;
+		  font-size: 20px;
+		  transition: color 0.3s ease;
+		}
+	
+		.footer-icons a:hover {
+		  color: #00ffcc;
+		}
+	  </style>
+	</head>
 	
 	<body class="is-preload">
 
@@ -85,121 +200,122 @@
 									<p>Throughout my journey, I’ve had the opportunity to work on impactful projects and achieve milestones, including:</p>
 									<div class="features">
 										<article>
-											<a href="https://github.com/MASTERDHARYOR/Marketing-Campaign-Dashboard" class="image"><img src="images/SUPER.png" alt="" /></a>
-											<div class="inner">
-												<h4>Marketing Dashboard Campaign</h4>
-												<p>This project focuses on building a dynamic dashboard for analyzing marketing campaigns. It covers data extraction, profitability analysis, A/B testing, and campaign comparisons, using Power BI for interactive visualizations. The dashboard provides actionable insights to optimize marketing strategies and boost ROI. Dive into the data-driven story and see how informed decisions are made. Explore the full project on GitHub for details and visual examples.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/Part 2.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Terraformed a small moon</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/Part 3.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Snapped dark matter in the wild</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-											</div>
+
+											 <!-- Project 1 -->
+    <a href="https://github.com/MASTERDHARYOR/Marketing-Campaign-Dashboard" class="project-card">
+		<img src="images/SUPER.png" alt="Marketing Dashboard">
+		<h3>Marketing Dashboard Campaign</h3>
+		<p>This project focuses on building a dynamic dashboard for analyzing marketing campaigns. It covers data extraction, profitability analysis, A/B testing, and campaign comparisons, using Power BI for interactive visualizations. The dashboard provides actionable insights to optimize marketing strategies and boost ROI. Dive into the data-driven story and see how informed decisions are made. Explore the full project on GitHub for details and visual examples.</p>
+	  </a>
+	  
+	  <!-- Project 2 -->
+	  <a href="https://github.com/MASTERDHARYOR/MASTERDHARYOR-Data-Analysis-with-Python-" class="project-card">
+		<img src="images/giphy.gif" alt="Python Data Analysis">
+		<h3>Python Data Analysis</h3>
+		<p>Exploratory Analysis with Python</p>
+	  </a>
+
+	</div>
+</article>
+			
 										</article>
 									</div>
 								</div>
 							</section>
 
 						<!-- Four -->
-						<section id="four">
-							<div class="carousel">
-								<h3>Certifications</h3>
-								<style>
-    /* Certification Accordion Styles */
-    #certifications {
-      text-align: center;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-    }
+<section id="four">
+  <div class="carousel">
+    <h3>Certifications</h3>
 
-    .accordion-item {
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
+    <style>
+      /* Certification Accordion Styles */
+      #certifications {
+        text-align: center;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
 
-    .accordion-header {
-      background-color: #007BFF;
-      color: #fff;
-      padding: 15px;
-      text-align: left;
-      cursor: pointer;
-      font-size: 16px;
-      border: none;
-      width: 100%;
-      outline: none;
-      transition: background-color 0.3s ease;
-    }
+      .accordion-item {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
 
-    .accordion-header:hover {
-      background-color: #3ee09d;
-    }
+      .accordion-header {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 15px;
+        text-align: left;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        width: 100%;
+        outline: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
 
-    .accordion-content {
-      display: none;
-      padding: 15px;
-      background-color: #f9f9f9;
-      text-align: center;
-    }
+      /* Modified Hover Effect */
+      .accordion-header:hover {
+        background-color: #3ee09d;  /* Slightly brighter green */
+        transform: scale(1.05);      /* Small scale effect */
+      }
 
-    .accordion-content img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
+      .accordion-content {
+        display: none;
+        padding: 15px;
+        background-color: #f9f9f9;
+        text-align: center;
+      }
 
-    .accordion-content p {
-      font-size: 14px;
-      color: #555;
-    }
+      .accordion-content img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
 
-    .accordion-item.active .accordion-content {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <section id="certifications">
-    <!-- Certification 1 -->
-    <div class="accordion-item">
-      <button class="accordion-header">Essential Data Analytics</button>
-      <div class="accordion-content">
-        <img src="images/Accenture.jpeg" alt="Essential Data Analytics">
-        <p>Udemy - Instructor: Programming Up</p>
-      </div>
+      .accordion-content p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .accordion-item.active .accordion-content {
+        display: block;
+      }
+    </style>
+  </div>
+
+  <!-- Certification 1 -->
+  <div class="accordion-item">
+    <button class="accordion-header">Essential Data Analytics</button>
+    <div class="accordion-content">
+      <img src="images/Accenture.jpeg" alt="Essential Data Analytics">
+      <p>Udemy - Instructor: Programming Up</p>
     </div>
+  </div>
 
-    <!-- Certification 2 -->
-    <div class="accordion-item">
-      <button class="accordion-header">Essential Business Analytics</button>
-      <div class="accordion-content">
-        <img src="images/BA.jpeg" alt="Essential Business Analytics">
-        <p>Data Insights - Instructor: Programming Hub</p>
-      </div>
+  <!-- Certification 2 -->
+  <div class="accordion-item">
+    <button class="accordion-header">Essential Business Analytics</button>
+    <div class="accordion-content">
+      <img src="images/BA.jpeg" alt="Essential Business Analytics">
+      <p>Data Insights - Instructor: Programming Hub</p>
     </div>
+  </div>
 
-    <!-- Certification 3 -->
-    <div class="accordion-item">
-      <button class="accordion-header">Power BI Job Simulation</button>
-      <div class="accordion-content">
-        <img src="images/PWC.jpeg" alt="Power BI Job Simulation">
-        <p>Training from Forage</p>
-      </div>
+  <!-- Certification 3 -->
+  <div class="accordion-item">
+    <button class="accordion-header">Power BI Job Simulation</button>
+    <div class="accordion-content">
+      <img src="images/PWC.jpeg" alt="Power BI Job Simulation">
+      <p>Training from Forage</p>
     </div>
-  </section>
+  </div>
 
+  <!-- Add the JavaScript just before closing the </body> tag -->
   <script>
     // JavaScript for Accordion Functionality
     document.querySelectorAll('.accordion-header').forEach((button) => {
@@ -217,9 +333,26 @@
         item.classList.toggle('active');
       });
     });
+
+    // Back to Top Button Functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const button = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    });
   </script>
-</body>
-</html>
+  
+  <!-- Back to Top Button -->
+  <button id="back-to-top" onclick="scrollToTop()">⬆ Back to Top</button>
+</section>
+
 
 							
 
