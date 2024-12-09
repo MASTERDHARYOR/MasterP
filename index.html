@@ -223,68 +223,61 @@
 								</div>
 							</section>
 
-						<!-- Four -->
+					
 <section id="four">
   <div class="carousel">
     <h3>Certifications</h3>
 
-    <style>
-      /* Certification Accordion Styles */
-      #certifications {
-        text-align: center;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-      }
-
-      .accordion-item {
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-
-      .accordion-header {
-        background-color: #007BFF;
-        color: #fff;
-        padding: 15px;
-        text-align: left;
-        cursor: pointer;
-        font-size: 16px;
-        border: none;
-        width: 100%;
-        outline: none;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-      }
-
-      /* Modified Hover Effect */
-      .accordion-header:hover {
-        background-color: #3ee09d;  /* Slightly brighter green */
-        transform: scale(1.05);      /* Small scale effect */
-      }
-
-      .accordion-content {
-        display: none;
-        padding: 15px;
-        background-color: #f9f9f9;
-        text-align: center;
-      }
-
-      .accordion-content img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 10px;
-      }
-
-      .accordion-content p {
-        font-size: 14px;
-        color: #555;
-      }
-
-      .accordion-item.active .accordion-content {
-        display: block;
-      }
+	<style>
+		/* Accordion Styles */
+		#certifications {
+		  text-align: center;
+		  padding: 20px;
+		  font-family: Arial, sans-serif;
+		}
+  
+		.accordion-item {
+		  border: 1px solid #ccc;
+		  margin-bottom: 10px;
+		  border-radius: 8px;
+		  overflow: hidden;
+		}
+  
+		.accordion-header {
+		  background-color: #007BFF;
+		  color: #fff;
+		  padding: 15px;
+		  text-align: left;
+		  cursor: pointer;
+		  font-size: 16px;
+		  border: none;
+		  width: 100%;
+		  outline: none;
+		  transition: background-color 1.3s ease, transform 1.3s ease;
+		}
+  
+		.accordion-header:hover {
+		  background-color: #3ee09d;  /* Change hover color */
+		  transform: scale(1.05);
+		}
+  
+		.accordion-content {
+		  display: none;
+		  padding: 15px;
+		  background-color: #f9f9f9;
+		  text-align: center;
+		  opacity: 0;  /* Start with hidden content */
+		  height: 0;   /* Start with no height */
+		  overflow: hidden;
+		  transition: opacity 1.5s ease, height 1.5s ease; /* Transition for reveal */
+		}
+  
+		.accordion-item.active .accordion-content {
+		  display: block;
+		  opacity: 1; /* Fade in */
+		  height: auto; /* Reveal full height */
+		}
+  
     </style>
   </div>
 
