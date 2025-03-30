@@ -145,6 +145,9 @@
         </section>
     </div>
     <button onclick="downloadResumeAsImage()">Download Resume as Image</button>
+    <button onclick="downloadResumeAsPDF()">Download Resume as PDF</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script>
         function downloadResumeAsImage() {
             html2canvas(document.body).then(function(canvas) {
@@ -155,7 +158,20 @@
                 alert('The resume has been downloaded as an image.');
             });
         }
+
+        function downloadResumeAsPDF() {
+            const { jsPDF } = window.jspdf;
+            html2canvas(document.body).then(function(canvas) {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF();
+                const imgProps = pdf.getImageProperties(imgData);
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                pdf.save('resume.pdf');
+                alert('The resume has been downloaded as a PDF.');
+            });
+        }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </body>
 </html>
